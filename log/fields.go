@@ -34,7 +34,7 @@ func (logger *Logger) fieldValues() Fields {
 		"seq":        logger.nextSeq(),            // auto-incrementing sequence number
 		"start_time": logger.created,              // start time of the logger
 		"time":       now.Format(time.StampMilli), // formatted time of log entry
-		"full_time":  now,                         // time of log entry
+		"full_time":  time.Now().Format("2006-01-02 15:04:05.999"),    // time of log entry
 		"rtime":      time.Since(logger.created),  // relative time of log entry since started
 		"pid":        os.Getpid(),                 // process id
 		"executable": logger.executable,           // executable filename

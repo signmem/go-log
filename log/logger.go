@@ -62,7 +62,7 @@ func getExecutableName() string {
 
 // NewSimple(sinks...) is equivalent to New("", false, sinks...)
 func NewSimple(sinks ...Sink) *Logger {
-	return New("", false, sinks...)
+	return New("", true, sinks...)
 }
 
 var defaultLogger *Logger
